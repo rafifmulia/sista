@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Jadwal Seminar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
+  <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
+  <meta content="Themesdesign" name="author" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/img/nodify/favicon.ico">
+
+  <!-- Pe-7 icon -->
+  <link href="./assets/css/nodify/pe-icon-7.css" rel="stylesheet" type="text/css" />
+
+  <!--Slider-->
+  <link rel="stylesheet" href="./assets/css/owl/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./assets/css/owl/owl.theme.default.min.css" />
+
+  <!-- css -->
+  <link href="./assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/nodify/style.min.css" rel="stylesheet" type="text/css" />
+
+  <link href="./assets/css/fontawesome/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <!-- <link href="./assets/css/sbadmin2/sb-admin-2.min.css" rel="stylesheet"> -->
+  <link href="./assets/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="./assets/css/sweetalert/sweetalert2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div id="preloader">
+    <div id="status">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--Navbar Start-->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark align-items-center">
+    <div class="container">
+      <!-- LOGO -->
+      <a class="logo mr-3" href="index.html">
+        <img src="./assets/img/nodify/sista.png" alt="" class="" height="26">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="" data-feather="menu"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav navbar-center" id="mySidenav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a href="jadwal.html" class="nav-link">Jadwal</a>
+          </li>
+          <li class="nav-item">
+            <a href="daftarseminar.html" class="nav-link">Daftar Seminar</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="#features" class="nav-link">Berita</a>
+          </li> -->
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+
+        </ul>
+
+        <ul class="list-inline ml-auto menu-social-icon mb-0 py-2 py-lg-0">
+          <li class="list-inline-item ml-0">
+            <button type="submit" id="submit" name="send" class="btn btn-primary" onClick="
+                            window.location.href='./login.html'">Login</button>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Start -->
+  <section class="hero-4-bg bg-light" style="background-image: url(./assets/img/nodify/hero-4-bg-img.png)" id="home">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-12 col-md-10 col-lg-9 mb-4">
+        <div class="card shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h2>Jadwal Seminar</h2>
+              </div>
+              <div class="col-12">
+                <div class="table-responsive" style="width:100%;">
+                  <table id="daftarSeminar" class="table table-striped table-bordered table-hover no-wrap"
+                    style="width:100%;">
+                    <thead class="bg-primary text-white">
+                      <tr>
+                        <th>No</th>
+                        <th>NIM</th>
+                        <th>Mahasiswa/i</th>
+                        <th>Seminar</th>
+                        <th>Waktu</th>
+                        <th>Ruangan</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-id="1">1</td>
+                        <td>0102041</td>
+                        <td data-name="Diego Armando"><a href="detailjadwalseminar.html">Diego Armando</a></td>
+                        <td>Proposal</td>
+                        <td>10.00 04-01-2021</td>
+                        <td>Google Meet</td>
+                      </tr>
+                      <tr>
+                        <td data-id="2">2</td>
+                        <td>0102042</td>
+                        <td data-name="Ahmad Budiman"><a href="detailjadwalseminar.html">Ahmad Budiman</a></td>
+                        <td>Seminar Hasil</td>
+                        <td>10.00 04-01-2021</td>
+                        <td>Zoom</td>
+                      </tr>
+                      <tr>
+                        <td data-id="3">3</td>
+                        <td>0102043</td>
+                        <td data-name="Fredelina Putri"><a href="detailjadwalseminar.html">Fredelina Putri</a></td>
+                        <td>Seminar Akhir</td>
+                        <td>10.00 04-01-2021</td>
+                        <td>B2034</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero End -->
+
+  <!-- About us Start -->
+
+  <!-- About us End -->
+
+  <!-- Services Start -->
+
+  <!-- Services End -->
+
+  <!-- Features Start -->
+
+  <!-- Features End -->
+
+  <!-- Project Start -->
+
+  <!-- Project End -->
+
+  <!-- Testimonial Start -->
+
+  <!-- Latest News End -->
+
+  <!-- Contact Us Start -->
+
+  <!-- Footer End -->
+
+  <!-- javascript -->
+  <script src="./assets/js/jquery/jquery.min.js"></script>
+  <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/scrollspy/scrollspy.min.js"></script>
+  <script src="./assets/js/jquery-easing/jquery.easing.min.js"></script>
+  <!-- feather icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- carousel -->
+  <script src="./assets/js/owl/owl.carousel.min.js"></script>
+
+  <!-- Main Js -->
+  <script src="./assets/js/nodify/app.js"></script>
+
+  <!-- DataTable -->
+  <script src="./assets/js/datatable/jquery.dataTables.min.js"></script>
+  <script src="./assets/js/datatable/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap.min.js"></script>
+
+  <script>
+    // Fether icon
+    feather.replace()
+
+    // Testimonial
+    $('#testi-clients').owlCarousel({
+      loop: true,
+      center: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      margin: 20,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+
+    var table = $('#daftarSeminar').DataTable({
+      responsive: true
+    });
+  </script>
+
+</body>
+
+</html>

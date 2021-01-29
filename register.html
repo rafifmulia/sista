@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Registrasi</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="./assets/css/fontawesome/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="./assets/css/sbadmin2/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+  <div class="container">
+
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        <div class="row">
+          <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+          <div class="col-lg-7">
+            <div class="p-5">
+              <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Buat Akun Baru!</h1>
+              </div>
+              <form action="#" class="user">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-user" id="username" placeholder="Username"
+                    required>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-user" id="email" placeholder="Email Address"
+                    required>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="password" class="form-control form-control-user" id="password" placeholder="Password"
+                      required>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="password" class="form-control form-control-user" id="password2"
+                      placeholder="Repeat Password" required>
+                  </div>
+                </div>
+                <button type="submit" id="createAccount" class="btn btn-primary btn-user btn-block">
+                  Buat Akun
+                </button>
+              </form>
+              <hr>
+              <div class="text-center">
+                <a class="small" href="forgot-password.html">Lupa Password?</a>
+              </div>
+              <div class="text-center">
+                <a class="small" href="login.html">Sudah Punya Akun? Login!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="./assets/js/jquery/jquery.min.js"></script>
+  <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="./assets/js/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="./assets/js/sbadmin2/sb-admin-2.min.js"></script>
+
+  <!-- SweetAert -->
+  <script src="./assets/js/sweetalert/sweetalert2.all.min.js"></script>
+
+  <script>
+    let username = $('#username');
+    let email = $('#email');
+    let password = $('#password');
+    let password2 = $('#password2');
+
+    $('#createAccount').on('click', function (e) {
+      e.preventDefault();
+
+      username.removeClass('border border-danger');
+      email.removeClass('border border-danger');
+      password.removeClass('border border-danger');
+      password2.removeClass('border border-danger');
+
+      if (username.val() == '') {
+        username.addClass('border border-danger');
+        Swal.fire({
+          title: 'Username Kosong',
+          text: 'Isi dulu dong!',
+          icon: 'warning',
+          confirmButtonText: 'Oke'
+        })
+        return false;
+      }
+      if (email.val() == '') {
+        email.addClass('border border-danger');
+        Swal.fire({
+          title: 'Email Kosong',
+          text: 'Isi dulu dong!',
+          icon: 'warning',
+          confirmButtonText: 'Oke'
+        })
+        return false;
+      } else if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.val())) {
+        email.addClass('border border-danger');
+        Swal.fire({
+          title: 'Email Tidak Valid',
+          text: 'Perbaikin dulu dong!',
+          icon: 'warning',
+          confirmButtonText: 'Oke'
+        })
+        return false;
+      }
+      if (password.val() == '') {
+        password.addClass('border border-danger');
+        Swal.fire({
+          title: 'Password Kosong',
+          text: 'Isi dulu dong!',
+          icon: 'warning',
+          confirmButtonText: 'Oke'
+        })
+        return false;
+      }
+      if (password2.val() == '') {
+        password2.addClass('border border-danger');
+        Swal.fire({
+          title: 'Pengulangan Password Kosong',
+          text: 'Isi dulu dong!',
+          icon: 'warning',
+          confirmButtonText: 'Oke'
+        })
+        return false;
+      }
+      if (password.val() != password2.val()) {
+        password2.addClass('border border-danger');
+        Swal.fire({
+          title: 'Password Tidak Sama',
+          text: 'Samain dulu dong!',
+          icon: 'warning',
+          confirmButtonText: 'Oke'
+        })
+        return false;
+      }
+
+      Swal.fire({
+        title: 'Registrasi Akun Berhasil',
+        text: 'Akun kamu akan diverifikasi oleh admin, selebihnya akan diinfokan melalui email :)',
+        icon: 'success',
+        confirmButtonText: 'Oke'
+      })
+      return true;
+    });
+  </script>
+
+</body>
+
+</html>

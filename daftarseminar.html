@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Jadwal Seminar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Bootstrap 4 Landing Page Template" />
+  <meta name="keywords" content="bootstrap 4, premium, marketing, multipurpose" />
+  <meta content="Themesdesign" name="author" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/img/nodify/favicon.ico">
+
+  <!-- Pe-7 icon -->
+  <link href="./assets/css/nodify/pe-icon-7.css" rel="stylesheet" type="text/css" />
+
+  <!--Slider-->
+  <link rel="stylesheet" href="./assets/css/owl/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./assets/css/owl/owl.theme.default.min.css" />
+
+  <!-- css -->
+  <link href="./assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/nodify/style.min.css" rel="stylesheet" type="text/css" />
+
+  <link href="./assets/css/fontawesome/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <!-- <link href="./assets/css/sbadmin2/sb-admin-2.min.css" rel="stylesheet"> -->
+  <link href="./assets/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="./assets/css/sweetalert/sweetalert2.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div id="preloader">
+    <div id="status">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--Navbar Start-->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark align-items-center">
+    <div class="container">
+      <!-- LOGO -->
+      <a class="logo mr-3" href="index.html">
+        <img src="./assets/img/nodify/sista.png" alt="" class="" height="26">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="" data-feather="menu"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav navbar-center" id="mySidenav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a href="jadwal.html" class="nav-link">Jadwal</a>
+          </li>
+          <li class="nav-item active">
+            <a href="daftarseminar.html" class="nav-link">Daftar Seminar</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a href="#berita" class="nav-link">Berita</a>
+          </li> -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+
+        </ul>
+
+        <ul class="list-inline ml-auto menu-social-icon mb-0 py-2 py-lg-0">
+          <li class="list-inline-item ml-0">
+            <button type="submit" id="submit" name="send" class="btn btn-primary" onClick="
+                            window.location.href='./login.html'">Login</button>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Hero Start -->
+  <section class="hero-1-bg bg-light" style="background-image: url(./assets/img/nodify/hero-1-bg-img.png)" id="home">
+    <div class="row d-flex justify-content-center">
+
+      <div class="col-sm-12 col-md-10 col-lg-9 mb-5">
+        <div class="card shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h2>Pendaftaran Seminar TA Baru</h2>
+              </div>
+              <div class="col-12 text-center">Pendaftaran Seminar berlaku untuk mahasiswa yang telah mendapat
+                persetujuan dari Pembimbing TA
+              </div>
+              <div class="container-fluid">
+                <div class="content mt-4">
+                  <div class="row mt-3">
+                    <div class="col-12">
+                      <form action="#">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-6">
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-3 col-lg-2">
+                                <label style="font-size:15px;font-weight:bold;">NIM</label>
+                              </div>
+                              <div class="col-sm-12 col-md-9 col-lg-10">
+                                <input id="nim" type="number" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-3 col-lg-2">
+                                <label style="font-size:15px;font-weight:bold;">Nama</label>
+                              </div>
+                              <div class="col-sm-12 col-md-9 col-lg-10">
+                                <input id="nama" type="text" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-3 col-lg-2">
+                                <label style="font-size:15px;font-weight:bold;">Prodi</label>
+                              </div>
+                              <div class="col-sm-12 col-md-9 col-lg-10">
+                                <select id="prodi" class="form-control">
+                                  <option value="0">Pilih Prodi</option>
+                                  <option value="si">Sistem Informasi</option>
+                                  <option value="ti">Teknik Informatika</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-5 col-lg-4">
+                                <label style="font-size:15px;font-weight:bold;">Tanggal Seminar</label>
+                              </div>
+                              <div class="col-sm-12 col-md-7 col-lg-8">
+                                <input id="tglSeminar" type="date" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-5 col-lg-4">
+                                <label style="font-size:15px;font-weight:bold;">Jam Seminar</label>
+                              </div>
+                              <div class="col-sm-12 col-md-7 col-lg-8">
+                                <input id="jamSeminar" type="time" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-4 col-lg-3">
+                                <label style="font-size:15px;font-weight:bold;">Ruangan</label>
+                              </div>
+                              <div class="col-sm-12 col-md-8 col-lg-9">
+                                <select id="ruangan" class="form-control">
+                                  <option value="0">Pilih Ruangan</option>
+                                  <option value="zoom">Zoom</option>
+                                  <option value="gmets">Google Meets</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-md-6">
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-4 col-lg-3">
+                                <label style="font-size:15px;font-weight:bold;">Judul TA</label>
+                              </div>
+                              <div class="col-sm-12 col-md-8 col-lg-9">
+                                <textarea id="judulTA" class="form-control"></textarea>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-4 col-lg-3">
+                                <label style="font-size:15px;font-weight:bold;">Seminar</label>
+                              </div>
+                              <div class="col-sm-12 col-md-8 col-lg-9">
+                                <select id="seminar" class="form-control">
+                                  <option value="0">Pilih Jenis Seminar</option>
+                                  <option value="1">Proposal</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-4 col-lg-4">
+                                <label style="font-size:15px;font-weight:bold;">Pembimbing</label>
+                              </div>
+                              <div class="col-sm-12 col-md-8 col-lg-8">
+                                <select id="pembimbing" class="form-control">
+                                  <option value="0">Pilih Pembimbing</option>
+                                  <option value="dosen123">Sirojul Munir S.SI, M.KOM</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-4 col-lg-3">
+                                <label style="font-size:15px;font-weight:bold;">Penguji1</label>
+                              </div>
+                              <div class="col-sm-12 col-md-8 col-lg-9">
+                                <select id="penguji1" class="form-control">
+                                  <option value="0">Pilih Penguji1</option>
+                                  <option value="dosen234">Ahmad Rio M.SI</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-sm-12 col-md-4 col-lg-3">
+                                <label style="font-size:15px;font-weight:bold;">Penguji2</label>
+                              </div>
+                              <div class="col-sm-12 col-md-8 col-lg-9">
+                                <select id="penguji2" class="form-control">
+                                  <option value="0">Pilih Penguji2</option>
+                                  <option value="dosen765">Amalia Rahmah M.T</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <button class="btn btn-primary" id="btnDaftar">Daftar</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Hero End -->
+
+  <!-- About us Start -->
+
+  <!-- About us End -->
+
+  <!-- Services Start -->
+
+  <!-- Services End -->
+
+  <!-- Features Start -->
+
+  <!-- Features End -->
+
+  <!-- Project Start -->
+
+  <!-- Project End -->
+
+  <!-- Testimonial Start -->
+
+  <!-- Latest News End -->
+
+  <!-- Contact Us Start -->
+
+  <!-- Footer End -->
+
+  <!-- javascript -->
+  <script src="./assets/js/jquery/jquery.min.js"></script>
+  <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/scrollspy/scrollspy.min.js"></script>
+  <script src="./assets/js/jquery-easing/jquery.easing.min.js"></script>
+  <!-- feather icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- carousel -->
+  <script src="./assets/js/owl/owl.carousel.min.js"></script>
+
+  <!-- Main Js -->
+  <script src="./assets/js/nodify/app.js"></script>
+
+  <!-- DataTable -->
+  <script src="./assets/js/datatable/jquery.dataTables.min.js"></script>
+  <script src="./assets/js/datatable/dataTables.bootstrap4.min.js"></script>
+
+  <!-- SweetAert -->
+  <script src="./assets/js/sweetalert/sweetalert2.all.min.js"></script>
+
+  <script>
+    // Fether icon
+    feather.replace()
+
+    const swalMix = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success mx-1',
+        cancelButton: 'btn btn-danger mx-1'
+      },
+      buttonsStyling: false
+    });
+
+    let nim = $('#nim');
+    let nama = $('#nama');
+    let prodi = $('#prodi');
+    let tglSeminar = $('#tglSeminar');
+    let jamSeminar = $('#jamSeminar');
+    let ruangan = $('#ruangan');
+    let judulTA = $('#judulTA');
+    let seminar = $('#seminar');
+    let pembimbing = $('#pembimbing');
+    let penguji1 = $('#penguji1');
+    let penguji2 = $('#penguji2');
+
+    $('#btnDaftar').on('click', function (e) {
+      e.preventDefault()
+      nim.removeClass('border border-danger')
+      nama.removeClass('border border-danger')
+      prodi.removeClass('border border-danger')
+      tglSeminar.removeClass('border border-danger')
+      jamSeminar.removeClass('border border-danger')
+      ruangan.removeClass('border border-danger')
+      judulTA.removeClass('border border-danger')
+      seminar.removeClass('border border-danger')
+      pembimbing.removeClass('border border-danger')
+      penguji1.removeClass('border border-danger')
+      penguji2.removeClass('border border-danger')
+
+      if (nim.val() == '') {
+        nim.addClass('border border-danger')
+        swalMix.fire({
+          title: 'Isi NIM kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        return false;
+      } else if (nama.val() == '') {
+        nama.addClass('border border-danger')
+        swalMix.fire({
+          title: 'Isi nama kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        return false;
+      } else if (prodi.val() == '0') {
+        prodi.addClass('border border-danger')
+        swalMix.fire({
+          title: 'Pilih prodi kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        return false;
+      } else if (tglSeminar.val() == '') {
+        swalMix.fire({
+          title: 'Pilih tgl seminar kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        tglSeminar.addClass('border border-danger')
+        return false;
+      } else if (jamSeminar.val() == '') {
+        swalMix.fire({
+          title: 'Pilih jam seminar kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        jamSeminar.addClass('border border-danger')
+        return false;
+      } else if (ruangan.val() == '0') {
+        swalMix.fire({
+          title: 'Pilih ruangan kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        ruangan.addClass('border border-danger')
+        return false;
+      } else if (judulTA.val() == '') {
+        swalMix.fire({
+          title: 'Pilih judul TA kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        judulTA.addClass('border border-danger')
+        return false;
+      } else if (seminar.val() == '0') {
+        swalMix.fire({
+          title: 'Pilih seminar kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        seminar.addClass('border border-danger')
+        return false;
+      } else if (pembimbing.val() == '0') {
+        swalMix.fire({
+          title: 'Pilih pembimbing kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        pembimbing.addClass('border border-danger')
+        return false;
+      } else if (penguji1.val() == '0') {
+        swalMix.fire({
+          title: 'Pilih penguji1 kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        penguji1.addClass('border border-danger')
+        return false;
+      } else if (penguji2.val() == '0') {
+        swalMix.fire({
+          title: 'Pilih penguji2 kamu dulu',
+          text: '',
+          icon: 'warning'
+        })
+        penguji2.addClass('border border-danger')
+        return false;
+      }
+
+      swalMix.fire({
+        title: 'Berhasil mendaftarkan seminar baru',
+        text: 'Silahkan cek email kamu, untuk konfirmasi dan informasi selanjutnya',
+        icon: 'success'
+      });
+    });
+  </script>
+
+</body>
+
+</html>
